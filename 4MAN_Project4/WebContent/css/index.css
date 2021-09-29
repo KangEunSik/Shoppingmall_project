@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@font-face{
+    font-family: "NanumBrush";
+    src: url("/fonts/NanumBrush.ttf");
+    
+}
+*{
+    padding: 0;
+    margin:  0 auto;
+    text-align: center;
+}
+li a {
+    text-decoration-line: none;
+    color: white;
+   
+}
+li a:hover{
+    color:black;
+}
+#header{
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 7;
+    width: 1400px;
+    height: 100px;
+    position: fixed;
+    background-color: white;
+   border-bottom: 3px solid gray;
+   
+    
+}
+.menu{
+    width:20%;
+    height: 100px;
+    z-index: 8;
+    float: left;
+  
+}
+.logo{
+   
+    width:60%;
+    height: 100px;
+    float: left;
+    
+}
+.logo h1{
+    font-family: "NanumBrush";
+}
+.logo h1 a{
+    text-decoration: none;
+    color: black;
+}
+.nav{
+    
+    width:20%;
+    height: 100px;
+    float: left;
+    
+}
+
+#blink{
+    width: 1800px;
+    height: 100px;
+
+}
+
+
+.menu img {
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.logo h1{
+    margin-top: 25px;
+}
+.nav .nav_icon{
+    
+    margin-left: 15px;
+    margin-top: 30px;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+.nav .nav_icon img{
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+#footer{
+    border-top: 1px solid gray;
+    margin-top: 300px;
+    width: 1400px;
+    height: 100px;
+    border-bottom:1px solid gray ;
+}
+
+
+#footer .footer_content{
+    margin-left: 60px;
+    margin-right: 50px;
+    width: 350px;
+    height: 100px;
+    float: left;
+}
+
+#footer .footer_content ul{
+    list-style: none;
+
+}
+#footer .footer_content ul li h4{
+
+    font-size: 0.4cm;
+    font-weight: bold;
+
+}
+
+#footer .footer_content ul .font{
+
+    font-size: 0.3cm;
+
+}
+
+
+
+input[id="menuicon"]{
+    display: none;
+}
+input[id="menuicon"]+label{
+    
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+    width: 55px;
+    height: 35px;
+    
+    position: relative;
+    cursor: pointer;
+}
+input[id="menuicon"]+label span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 20px;
+    background-color:gray ;
+    transition: all .35s;
+}
+input[id="menuicon"]+label span:nth-child(1){
+   top: 0;
+}
+input[id="menuicon"]+label span:nth-child(2){
+   top:50%;
+   transform: translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3){
+   bottom: 0;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(1){
+   top: 50%;
+   transform: translateY(-50%) rotate(45deg);
+   background-color:white ;
+   
+}
+input[id="menuicon"]:checked+label span:nth-child(2){
+  opacity: 0;
+}
+input[id="menuicon"]:checked+label span:nth-child(3){
+   bottom: 50%;
+   transform: translateY(50%) rotate(-45deg);
+   background-color:white ;
+}
+div[class="sidebar"]{
+    width: 500px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -400px;
+    z-index:-1;
+    transition: all .35s;
+}
+input[id="menuicon"]:checked+label+div{
+    left: 0;
+    background-color: rgba(219, 212, 212, 0.788);
+   
+    
+}
+
+.sidebar ol{
+    margin: 0;
+    right: 0;
+    left: 0;
+    margin-top: 150px;
+    width: 200px;
+    height: 500px;
+    
+}
+.sidebar ol ul{
+    
+    width: 200px;
+    height: 500px;
+    
+ 
+    list-style: none;
+}
+.sidebar ul li{
+    
+    padding: 20px;
+    text-align: left;
+    font-size: 1cm;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+input[id="login"]{
+    display: none;
+}
+input[id="login"]+label{
+    margin: 0 auto;
+    display: block;
+ 
+    
+    position: relative;
+    cursor: pointer;
+}
+
+div[class="login_bar"]{
+   width: 550px;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   right: -550px;
+
+   z-index: -1;
+   transition: all .35s;
+}
+input[id="login"]:checked+label img{
+    opacity: 0;
+    
+}
+input[id="login"]:checked+label span{
+    opacity: 1;
+    
+}
+input[id="login"]:checked+label+div{
+    right: 0;
+    background-color: rgba(219, 212, 212, 0.788);
+}
+#login_close{
+    margin-right: 40px;
+    margin-top: 50px;
+    width: 30px;
+    height: 30px;
+}
+input[id="login"]+label span{
+    opacity: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 20px;
+    background-color:black ;
+    transition: all .35s;
+}
+input[id="login"]+label span:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color:black ;
+    
+ }
+ input[id="login"]+label span:nth-child(3){
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+    background-color:black ;
+ }
+
+.login_bar ol{
+    margin: 0;
+    right: 0;
+    left: 0;
+    margin-top: 200px;
+    width: 200px;
+    height: 500px;
+    
+}
+.login_bar ol ul{
+    
+    width: 200px;
+    height: 500px;
+    
+ 
+    list-style: none;
+}
+.login_bar ul li{
+    padding: 40px;
+    text-align: left;
+    font-size: 1cm;
+    font-weight: bold;
+    color: white;
+}
+
+.search > div {
+    display: inline-block;
+    position: relative;
+    filter: drop-shadow(0 1px #0091c2);
+  }
+  
+  .search > div:after {
+    content: "";
+    background: rgb(0, 0, 0);
+    width: 3px;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    right: -3px;
+    transform: rotate(135deg);
+  }
+  
+  .search > div > input {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    background: transparent;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border: solid 3px rgb(0, 0, 0);
+    outline: none;
+    border-radius: 35px;
+    transition: width 0.5s;
+  }
+  
+  .search > div > input::placeholder {
+    color: #000000;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+  }
+  
+  .search > div > input:focus::placeholder {
+    opacity: 1;
+  }
+  
+  .search > div > input:focus,
+  .search > div > input:not(:placeholder-shown) {
+  	cursor: pointer;
+    width: 80px;
+  }
